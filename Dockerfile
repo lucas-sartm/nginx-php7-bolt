@@ -49,7 +49,7 @@ RUN apk update && \
     sed -i "s|max_file_uploads =.*|max_file_uploads = ${PHP_MAX_FILE_UPLOAD}|" /etc/php7/php.ini && \
     sed -i "s|post_max_size =.*|max_file_uploads = ${PHP_MAX_POST}|" /etc/php7/php.ini && \
     sed -i "s/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/" /etc/php7/php.ini && \
-    ln -s /usr/bin/php7 /usr/bin/php && \
+    ln -s /usr/sbin/php-fpm7 /usr/bin/php && ln -s /usr/sbin/php-fpm7 /usr/bin/env/php \
     curl -O -k https://bolt.cm/distribution/bolt-latest.tar.gz && tar -xzf bolt-latest.tar.gz --strip-components=1 && \
     chown -R nginx:nginx . && \
     chown nginx:root -R /var/lib/nginx && \
