@@ -10,5 +10,5 @@ for dir in /var/www/html/app/config/ /var/www/html/extensions/ /var/www/html/pub
     find $dir -type f -print0 | xargs -0 chmod u+rw-x,g+rw-x,o+r-wx > /dev/null 2>&1
 done
 
-php-fpm
+php-fpm7
 exec nginx -g 'daemon off;'
