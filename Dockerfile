@@ -1,5 +1,5 @@
 FROM alpine:latest
-MAINTAINER Rômulo Guimarães <romulo1984@gmail.com>
+MAINTAINER Lucas Sartori <lucas.sartm@gmail.com>
 
 # Timezone
 ENV TIMEZONE=America/Sao_Paulo \
